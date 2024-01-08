@@ -147,6 +147,31 @@ button {
   box-sizing: border-box;
 }
 
+button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+button:hover span {
+  padding-right: 25px;
+}
+
+button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
 
 /******************************   P PRINCIPAL VALORS   ****************************/
 
@@ -251,8 +276,10 @@ h3 {
   background-color: var(--secundari);
 }
 
-.activitats h2 {
+.pagina-principal .activitats > h2 {
   color: var(--primari);
+  text-align: center;
+  padding-top: 2dvw;
 }
 
 .activitats .accions {
@@ -263,10 +290,15 @@ justify-content: center;
 gap: 5px;
 }
 
-.activitats .accions .button {
+.activitats .accions .outline {
   border-color: var(--primari-2);
   border-style: solid;
 }
+
+.activitats .accions .outline:active {
+  background-color: var(--primari-2);
+}
+
 
 .detalls-activitats {
   display: flex;
