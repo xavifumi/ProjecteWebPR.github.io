@@ -22,16 +22,16 @@
 
 .menu-principal {
   list-style-type: none;
-  width: auto;
-  margin: auto;
+  width: auto;  
   padding: 0;
-  overflow: hidden;
   justify-self: center;
+  display: flex;
 }
 
 
 .menu-principal li {
-  float: left;
+  
+  
 }
 
 
@@ -50,6 +50,36 @@
   white-space: nowrap;
   display: block;
   padding: 16px;
+  position: relative;
+}
+
+.menu-principal li:hover .sub-menu {
+  z-index: 1;
+ /* ADD ME */
+  max-height: 10vw;
+
+  transition: 
+  max-height 0.3s ease-out /* ADD ME */
+}
+
+.menu-principal  .sub-menu {
+  width: auto;
+  position: absolute;
+
+  z-index: 0;
+  background-color: var(--secundari);
+   /* ADD ME */
+  max-height: 0px;
+}
+
+.menu-principal li:hover .sub-menu a{
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.menu-principal .sub-menu a {
+  color: var(--primari);
+  opacity: 0;
 }
 
 .nav-right{
