@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv = "content-language" content = "ca">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="globals.css" />
     <link rel="stylesheet" href="styleguide.css" />
     <link rel="stylesheet" href="style.css" />
@@ -11,40 +12,47 @@
   </head>
   <body>
     <nav class="nav">
-      <a href=""><img alt="" class="logo" src="img/logo-cep3-1.png" /></a>
-      <ul class="menu-principal text-wrapper">       
-      <li><a href="">Activitats</a>
+      <a href="index.html"><img alt="" class="logo" src="img/logo-cep.png" /></a>
+      <ul class="menu-principal">       
+      <li class="menu-item"><a href="#">Activitats</a>
         <ul class="sub-menu">
-          <li><a href="#"><span class="arrow">&#9658;</span>  Submenu 1</a>
+          <li><a href="noticies.html">Notícies</a>
           </li>
-          <li><a href="#"><span class="arrow">&#9658;</span>  Submenu 2</a>
+          <li><a href="#">Calendari</a>
+          </li>
+          <li><a href="#">Les Activitats</a>
           </li>
         </ul>
       </li>
-      <li><a href="">El Club</a>
+      <li class="menu-item"><a href="elclub.html">El Club</a>
         <ul class="sub-menu">
-          <li><a href="#"><span class="arrow">&#9658;</span>  Submenu 1</a>
+          <li><a href="#">Presentació</a>
           </li>
-          <li><a href="#"><span class="arrow">&#9658;</span>  Submenu 2</a>
+          <li><a href="activitats.html">Activitats Socials</a>
+          </li>
+          <li><a href="#">Instal·lacions</a>
           </li>
         </ul>
       </li>
-      <li><a href="">Socis</a>
+      <li class="menu-item"><a href="#">Socis</a>
         <ul class="sub-menu">
-          <li><a href="#"><span class="arrow">&#9658;</span>  Submenu 1</a>
+          <li><a href="#">Avantatges</a>
           </li>
-          <li><a href="#"><span class="arrow">&#9658;</span>  Submenu 2</a>
+          <li><a href="#">Tarifes</a>
+          </li>
+          <li><a href="#">Alta</a>
           </li>
         </ul>
       </li>
-      <li><a href="">Contacte</a></li>
+      <li><a href="#">Contacte</a></li>
       </ul>
       <div class="nav-right">
-        <a href=""><img alt="" class="zoom-in nav-icon" src="img/zoom-in-1.svg" /></a>
-        <a href=""><img alt="" class="vector nav-icon" src="img/vector.svg" /></a>
+        <a href="#"><img alt="" class="zoom-in nav-icon" src="img/zoom-in-1.svg" /></a>
+        <a href="#"><img alt="" class="vector nav-icon" src="img/vector.svg" /></a>
       </div>
     </nav>
-    <div class="pagina-principal">
+    <main class="pagina-principal">
+      <div class="espaiador-menu"></div>
       <header class="benvinguda">
           <h1 class="titol">Club Esportiu Palomar</h1>
           <p class="subtitol">Líders en l’esport de Sant Andreu<br />des de 1955</p>
@@ -52,8 +60,8 @@
       </header>
 
       <section class="presentacio">       
-          <div class="rectangle"></div> 
-          <div class="group">
+           
+          <div class="grup-flex-1gap">
             <div class="part">            
               <h2 class="presentaci-club">Un club compromès</h2>
               <p class="presentacio-p">
@@ -69,28 +77,28 @@
             </div>
             <div class="part">
               <h2 class="valors">Els nostres valors</h2>
-              <p class="el-nostre-objectiu-s">
+              <p class="el-nostre-objectius">
                 El nostre objectiu és fomentar la passió pel futbol, per aprendre valors com el treball en equip, la
                 disciplina i la superació personal. Els nostres entrenadors, amb una àmplia experiència, estan
                 compromesos a guiar els nostres jugadors i jugadores pel camí de l'èxit i el creixement personal.
                 Els nostres valors són:
               </p>
               <div class="icona-valor">
-                <img alt="" class="sports-soccer" src="img/sports-soccer.svg" />
-                <p class="p">
+                <img alt="" class="sports-soccer" src="img/sports-soccerB.svg" />
+                <p class="">
                   Passió per l’esport: A través de la pràctica esportiva, aspirem a crear uns habits de vida activa i
                   saludable entre els membres de la nostra comunitat.
                 </p>
               </div>
               <div class="icona-valor">
-                <img alt="" class="people" src="img/people.svg" />
-                <p class="comunitat-unida">
+                <img alt="" class="people" src="img/peopleB.svg" />
+                <p class="">
                   Comunitat Unida: Considerem la nostra comunitat com una gran família. Fomentem una atmosfera
                   d'inclusió i suport mutu, on cada jugador, entrenador i membre del club és valorat i respectat.
                 </p>
               </div>
               <div class="icona-valor">
-                <img alt="" class="psychology" src="img/psychology.svg" />
+                <img alt="" class="psychology" src="img/psychologyB.svg" />
                 <p class="desenvolupament">
                   Desenvolupament Personal i Esportiu: Ens comprometem a proporcionar un entorn on els nostres membres
                   puguin desenvolupar habilitats futbolístiques alhora que adquireixen valors com la responsabilitat,
@@ -108,36 +116,43 @@
           <button class="outline"><span>Basquet</span></button>
           <button class="outline"><span>Pàdel</span></button>
         </div>
+        <div class="flex">
+          <select name="select-activitats" id="select-activitats">
+            <option value="fubol">Futbol</option>
+            <option value="basquet">Basquet</option>
+            <option value="padel">Pàdel</option>
+          </select>
+        </div>
         <div class="detalls-activitats">
           <div class="fitxa-detall">
-            <img alt="" class="imatge-detall" src="img/imatge.png" />
+            <img alt="Uns joves alevins escoltant el seu entrenador" class="imatge-detall" src="img/imatge.png" />
             <h3 class="detall-activitat">Horaris</h3>
             <p class="info-activitat">
               Els nostres horaris d'entrenament s'ajusten per oferir una formació completa als jugadors. Amb
               sessions setmanals que equilibren tècniques, tàctiques i condició física, preparem amb passió per a
               emocionants partits.
             </p>
-            <a href=""><p class="mes-activitat">Consulta horari segons la divisió.</p></a>
+            <a href="#"><p class="mes-activitat">Consulta horari segons la divisió.</p></a>
           </div>
           <div class="fitxa-detall">
-            <img alt="" class="imatge-detall" src="img/imatge-2.png" />
+            <img alt="L'equip juvenil celebrant una victoria" class="imatge-detall" src="img/imatge-2.png" />
             <h3 class="detall-activitat">Competicions</h3>
             <p class="info-activitat">
               Participem amb determinació en competicions destacades, des de lligues locals fins a tornejos
               regionals. Amb orgull, busquem l'excel·lència en cada torneig, forjant èxits inoblidables i
               vincles duradors.
             </p>
-            <a href=""> <p class="mes-activitat">Vine a veure els partits.</p></a>
+            <a href="#"> <p class="mes-activitat">Vine a veure els partits.</p></a>
           </div>
           <div class="fitxa-detall">
-            <img alt="" class="imatge-detall" src="img/imatge-3.png" />
+            <img alt="Elements financers: calculadora i monedes" class="imatge-detall" src="img/imatge-3.png" />
             <h3 class="detall-activitat">Tarifes</h3>
             <p class="info-activitat">
               Els preus de la nostra membresia són assequibles i adaptats a tots els grups d'edat. Oferim
               opcions flexibles amb avantatges exclusius&nbsp;&nbsp;i descomptes en equipament i participació
               prioritària en esdeveniments especials.
             </p>
-            <a href=""><p class="mes-activitat">Coneix els avantatges de ser soci.</p></a>
+            <a href="#"><p class="mes-activitat">Coneix els avantatges de ser soci.</p></a>
           </div>    
         </div>
       </section>
@@ -182,7 +197,7 @@
         <h2 class="">Actualitat</h2>
         <div class="detalls-activitats">
           <div class="noti">
-            <div class="noti-capcalera noti-1">
+            <div class="noti-capcalera">
               <img src="./img/group-15-2.png" alt="Joan cases a punt de xutar contra Torreblanca">
               <h3 class="">L’estadi vibra malgrat la derrota juvenil</h3>
             </div>
@@ -191,33 +206,33 @@
                 No hi va haver sort, tot i llançar a porta més de 17 cops, els jugadors del juvenil masculí A no van
                 aconseguir endur-se la victòria davant un àgil defensor a Torreblanca.
               </p>
-              <a class="noti-mes" href="">llegeix-ne més</a>
+              <a class="noti-mes" href="#">llegeix-ne més</a>
             </div>
           </div>
           <div class="noti">
-            <div class="noti-capcalera noti-2">
+            <div class="noti-capcalera">
               <img src="./img/group-15-1.png" alt="Joan cases a punt de xutar contra Torreblanca">
               <h3 class="">Exposició futbol sense fronteres</h3>
             </div>
             <div class="noti-body">
-              <p class="text-wrapper-16">
+              <p class="">
                 Des del passat 1 de desembre i fins al 30 de març hi ha disponible l’exposició “futbol sense fronteres” de
                 Joan Vila, que ha recopilat més de 200 imatges relacionades amb l’esport.
               </p>
-              <a class="noti-mes" href="">llegeix-ne més</a>
+              <a class="noti-mes" href="#">llegeix-ne més</a>
             </div>
           </div>
           <div class="noti">
-            <div class="noti-capcalera noti-3">
+            <div class="noti-capcalera">
               <img src="./img/group-15.png" alt="Joan cases a punt de xutar contra Torreblanca">
               <h3 class="">Concentració massiva per la final regional</h3>
             </div>
             <div class="noti-body">
-              <p class="text-wrapper-16">
+              <p class="">
                 Un centenar de seguidor del CE Palomar es van reunir per a seguir de prop la final regional de futbol base
                 que tenia 3 equips del Palomar en competició.
               </p>
-              <a class="noti-mes" href="">llegeix-ne més</a>
+              <a class="noti-mes" href="#">llegeix-ne més</a>
             </div>
           </div>
         </div>
@@ -230,8 +245,8 @@
             aquesta oportunitat de formar part de la nostra apassionada família esportiva!
           </p>
           <div class="botonera">
-            <button class="button-5"><span class="">Fes-te Soci</span></button>
-            <button class="button-6"><span class="">Avantatges</span></button>
+            <button class="button"><span class="">Fes-te Soci</span></button>
+            <button class="button"><span class="">Avantatges</span></button>
           </div>
       </section>
 
@@ -245,17 +260,15 @@
           <div class="post instag">
             <img alt="" class="instag" src="img/instag-1.png" />
             <div class="post-signat">
-              <img alt="" class="avatar" src="img/logo-cep3-1.png" />
-              <div class="text-wrapper-22">@CEPalomar</div>
+              <img alt="" class="avatar" src="img/logo-cep.png" />
+              <div class="autor">@CEPalomar</div>
             </div>
           </div>
           <div class="post faceb">
-            <div class="overlap-6">
             <img alt="" class="facebook" src="img/facebook1-1.png" />
-            </div>
             <div class="post-signat">
-              <img alt="" class="avatar" src="img/logo-cep3-1.png" />
-              <div class="text-wrapper-23">C. E. Palomar</div>
+              <img alt="" class="avatar" src="img/logo-cep.png" />
+              <div class="autor">C. E. Palomar</div>
             </div>
             <p class="XVII-mostra-de">
               Partidàs dels nostres juvenils! El resultat final no ens ha fet justícia! Vinga Palomar! a per totes!
@@ -263,31 +276,29 @@
           </div>
           <div class="post tweet">
             <div class="post-signat">
-              <img alt="" class="avatar" src="img/logo-cep3-1.png" />
-              <div class="text-wrapper-25">@C. E. Palomar</div>
+              <img alt="" class="avatar" src="img/logo-cep.png" />
+              <div class="autor">@C. E. Palomar</div>
             </div>
-            <p class="text-wrapper-24">
+            <p class="">
               Preparats per a les festes? Si no sabeu que fer els dies de nadal, tenim preparat un casal de nadal per a
               que els més joves puguin passar-s’ho d’allò més bé els matins del 25 al 29 de desembre i del 2 al 5 de
               gener! apunta’t al nostre web!
             </p>
           </div>
           <div class="post instag">
-            <img alt="" class="instag-2" src="img/instag-1-2.png" />
+            <img alt="" class="instag" src="img/instag-1-2.png" />
             <div class="post-signat">
-              <img alt="" class="avatar" src="img/logo-cep3-1.png" />
-              <div class="text-wrapper-26">@CEPalomar</div>
+              <img alt="" class="avatar" src="img/logo-cep.png" />
+              <div class="autor">@CEPalomar</div>
             </div>
           </div>
           <div class="post faceb">
-            <div class="overlap-6">
               <img alt="" class="facebook" src="img/facebook1-1-1.png" />
-            </div>
             <div class="post-signat">
-              <img alt="" class="avatar" src="img/logo-cep3-1.png" />
-              <div class="text-wrapper-23">C. E. Palomar</div>   
+              <img alt="" class="avatar" src="img/logo-cep.png" />
+              <div class="autor">C. E. Palomar</div>   
             </div>
-            <p class="XVII-mostra-de-2">
+            <p class="">
               Duríssim entrenament que segur donarà resultats el proper diumenge! No ens falleu i veniu a animar els
               Cadets! Força Palomar!
             </p>
@@ -296,27 +307,25 @@
       </section>
 
       <section class="patrocinis">
-        <div class="the-largest-2">
-          <h2 class="text-wrapper-27">Els nostres patrocinadors</h2>
-          <h3 class="text-wrapper-28">
+          <h2 class="">Els nostres patrocinadors</h2>
+          <h3 class="">
             Tot el nostre agraïment per als qui feu possible que seguim vivint l’esport cada dia:
           </h3>
-        </div>
         <div class="patros-graella">
-          <img alt="" class="grey-textured-brush" src="img/grey-textured-brush-floral-frame-logo-1.png" />
-          <img alt="" class="grey-textured-brush-2" src="img/grey-textured-brush-floral-frame-logo-2.png" />
-          <img alt="" class="grey-textured-brush-3" src="img/grey-textured-brush-floral-frame-logo-3.png" />
-          <img alt="" class="grey-textured-brush-4" src="img/grey-textured-brush-floral-frame-logo-4.png" />
-          <img alt="" class="grey-textured-brush-5" src="img/grey-textured-brush-floral-frame-logo-5.png" />
-          <img alt="" class="grey-textured-brush-6" src="img/grey-textured-brush-floral-frame-logo-6.png" />
-
+          <img alt="" class="logo-patrocini" src="img/logo-1.png" />
+          <img alt="" class="logo-patrocini" src="img/logo-2.png" />
+          <img alt="" class="logo-patrocini" src="img/logo-3.png" />
+          <img alt="" class="logo-patrocini" src="img/logo-4.png" />
+          <img alt="" class="logo-patrocini" src="img/logo-5.png" />
+          <img alt="" class="logo-patrocini" src="img/logo-6.png" />
         </div>
       </section>
-    </div>
+    </main>
+
     <footer class="">
       <div class="footer-main">
         <div class="logo-container">
-          <img alt="" class="logo" src="img/logo-cep3-1-1.png" />
+          <img alt="" class="logo" src="img/logo-cep.png" />
         </div>
         <ul class="footer-menu">
           <li>
