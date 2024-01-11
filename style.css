@@ -18,7 +18,7 @@
   width:98vw;
   background-color: var(--primari);
   z-index: 10;
-  border-bottom: 2px solid var(--primari-2);
+  border-top: 2px solid var(--primari-2);
 }
 
 .nav > a {
@@ -120,6 +120,10 @@
   margin-top: 0;
 }
 
+.espaiador-footer {
+  margin-top: 14vw;
+}
+
 .pagina-principal .benvinguda {
   position: relative;
   width: 100%;
@@ -138,7 +142,7 @@
   font-family: var(--h-1-font-family);
   font-weight: var(--h-1-font-weight);
   color: var(--primari-2);
-  font-size: 100px;
+  font-size: var(--h-1-font-size);
   text-align: center;
   letter-spacing: var(--h-1-letter-spacing);
   line-height: var(--h-1-line-height);
@@ -149,7 +153,7 @@
   font-family: var(--h-3-font-family);
   font-weight: var(--h-3-font-weight);
   color: var(--gris-5);
-  font-size: 32px;
+  font-size: var(--h-3-font-size);
   text-align: center;
   letter-spacing: var(--h-3-letter-spacing);
   line-height: var(--h-3-line-height);
@@ -159,7 +163,7 @@
 button {
   font-family: var(--p-font-family);
   font-weight: var(--p-strong-font-weight);
-  font-size: 24px;
+  font-size: var(--p-strong-font-size);
   background-color: var(--secundari);
   color: var(--secundari-2);
   width: 40dvw;
@@ -206,10 +210,15 @@ button:hover span:after {
     position: fixed;
     bottom: auto;
     top: 0;
+    border-bottom: 2px solid var(--primari-2);
   }
 
   .espaiador-menu {
     margin-top: 4vw;
+  }
+
+  .espaiador-footer {
+    margin-top: 0;
   }
 
   .pagina-principal .benvinguda {
@@ -259,13 +268,14 @@ button:hover span:after {
 }
 
 .part {
-  width: 100vw;
+  width: 97vw;
+  padding: 3vw;
 }
 
 
 h2 {
   font-family: var(--h-2-font-family);
-  font-size: 64px;
+  font-size: var(--h-2-font-size);
   text-align: center;
   font-weight: var(--h-2-font-weight);
   letter-spacing: var(--h-2-letter-spacing);
@@ -276,7 +286,7 @@ h2 {
 
 h3 {
   font-family: var(--h-3-font-family);
-  font-size: 32px;
+  font-size: var(--h-3-font-size);
   font-style: var(--h-3-font-style);
   font-weight: var(--h-3-font-weight);
   margin-bottom: 2dvw;
@@ -289,7 +299,7 @@ h3 {
 .presentacio-p {
   margin: 0 4dvw 4dvw 4dvw;
   font-family: var(--p-font-family);
-  font-size: 22px;
+  font-size: var(--p-screen-font-size);
   font-weight: var(--p-font-weight);
   color: var(--gris-5);
 }
@@ -302,7 +312,7 @@ h3 {
 .el-nostre-objectius {
   margin: 0 4dvw 2dvw;
   font-family: var(--p-font-family);
-  font-size: 22px;
+  font-size: var(--p-screen-font-size);
   font-weight: var(--p-font-weight);
   color: var(--secundari-2);
 }
@@ -319,7 +329,7 @@ h3 {
 
 .icona-valor p {
   font-family: var(--p-font-family);
-  font-size: 16px;
+  font-size: var(--p-font-size);
   font-weight: var(--p-screen-letter-spacing);
   color: var(--secundari-2);
   margin-left: 1dvw;
@@ -395,7 +405,7 @@ gap: 5px;
   border: 2px solid var(--primari-2);
   border-radius: 6px;
   height: 10dvw;
-  font-size: 16px;
+  font-size: var(--p-font-size);
   font-family: var(--p-font-family);
 }
 
@@ -446,7 +456,7 @@ gap: 5px;
 
 .fitxa-detall p {
   font-family: var(--p-screen-font-family);
-  font-size: 16px;
+  font-size: var(--p-screen-font-size);
   font-style: var(--p-screen-font-style);
   font-weight: var(--p-screen-font-weight);
   line-height: normal;
@@ -455,7 +465,7 @@ gap: 5px;
 
 .fitxa-detall .mes-activitat {
   font-family: var(--p-screen-big-font-family);
-  font-size: 22px;
+  font-size: var(--p-screen-big-font-size);
   font-style: var(--p-screen-big-font-style);
   font-weight: var(--p-screen-big-font-weight);
   color: var(--primari);
@@ -508,18 +518,36 @@ gap: 5px;
   color: var(--gris-5);
 }
 
+.no-mobil {
+  display: none;
+}
+
+.agenda .flex img {
+  align-self: center;
+  width: 10vw;
+  height: 10vw;
+  padding: 1vw;
+}
+
 .agenda .esdeveniment {
   height: max-content;
-  padding: 1dvw 0;
+  padding: 3dvw 0;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  border-bottom: 2px solid var(--gris-5);
+  flex-direction: column;
   font-family: var(--p-strong-font-family);
   font-size: var(--p-strong-font-size);
   font-weight: var(--p-strong-font-weight);
   color: var(--primari-2);
 } 
+
+.agenda .esdeveniment .activitat-tipus, .activitat-inscriu {
+  display: none;
+}
+
+
+.separadorBlanc {
+  border-bottom: 2px solid var(--gris-5);
+}
 
 .agenda .esdeveniment .activitat-nom {
   flex: 3 1 0;
@@ -531,6 +559,9 @@ gap: 5px;
 
 .agenda .esdeveniment .activitat-info {
   flex: 5 1 0;
+  font-weight: var(--p-font-weight);
+  font-size: var(--p-font-size);
+  
 }
 
 .agenda .esdeveniment .activitat-inscriu {
@@ -543,11 +574,41 @@ gap: 5px;
   
 }
 
+@media (min-width: 600px) {
+
+  .no-mobil {
+    display: block;
+  }
+
+.agenda .flex img {
+  display: none;
+}
+
+.agenda .flex {
+  display: block;
+}
+
+.agenda .esdeveniment {
+  padding: 1dvw 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.agenda .esdeveniment .activitat-tipus, .activitat-inscriu {
+  display: block;
+}
+
+.agenda .esdeveniment .activitat-info {
+  font-weight: var(--p-strong-font-weight);
+}
+
+}
+
 /************************ P PRINCIPAL NOTICIES *****************************************/
 
 .noticies {
   width: 100%;
-  padding: 0 10dvw;
   background-color: var(--gris-5);
   display: flex;
   flex-direction: column;
@@ -555,16 +616,18 @@ gap: 5px;
 }
 
 .noticies h2 {
+  padding: 0 10dvw;
   text-align: left;
   margin-bottom: 2dvw;
 }
 
 .noticies .detalls-activitats {
-  margin: 0;
   gap: 2dvw;
+  margin: 0 10dvw;
 }
 
 .noticies .noti {
+  min-width: 76vw;
   flex: 1 1 0;
   border-radius: 12px;
   overflow: hidden;
@@ -584,9 +647,7 @@ gap: 5px;
 }
 
 .noticies .noti-body {
-  width: 100%;
-
-  padding: 1dvw;
+  padding: 3dvw;
   background-color: var(--secundari);
   overflow: hidden;
   display: flex;
@@ -597,7 +658,7 @@ gap: 5px;
 .noticies .noti-body p {
   overflow: hidden;
   text-overflow: ellipsis;
-  height: 8dvw;
+  height: 16dvw;
   padding-bottom: 1dvw ;
   font-size: var(--p2-screen-font-size);
   font-weight:  var(--p2-screen-font-weight);
@@ -637,8 +698,33 @@ gap: 5px;
 
 
 .noticies button {
-  margin: 3dvw auto;
+  margin: 6dvw auto;
   background-color: var(--primari-2);
+}
+
+@media (min-width: 600px) {
+
+  .noticies .detalls-activitats {
+    padding: 0 10dvw;
+    margin: 0;
+    overflow-x: auto;
+  }
+
+  .noticies .noti {
+    min-width: auto;
+  }
+
+  .noticies .noti-body {
+    padding: 1dvw;
+  }
+  
+  .noticies .noti-body p {
+    height: 8dvw;
+  }
+
+  .noticies button {
+    margin: 3dvw auto;
+  }
 }
 
 /********************* P PRINCIPAL FESTE SOCI ******************************************/
@@ -647,7 +733,7 @@ gap: 5px;
   width: 100%;
   padding: 05dvw 10dvw;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 1dvw;
 }
 
@@ -667,10 +753,27 @@ gap: 5px;
   align-self: center;
   display: flex;
   justify-content: space-evenly;
+  flex-direction: inherit;
+}
+
+.fes-te-soci .botonera button {
+  margin: 3dvw 0;
 }
 
 .fes-te-soci .botonera button:last-child {
   background-color: var(--primari-2);
+}
+
+@media (min-width: 600px) {
+
+  .fes-te-soci {
+  width: 100%;
+  padding: 05dvw 10dvw;
+  display: flex;
+  flex-direction: row;
+  }
+
+
 }
 
 /************************ P PRINCIPAL XARXES ******************************/
@@ -694,12 +797,9 @@ gap: 5px;
 }
 
 .xarxes .post {
+  min-width: 76vw;
   flex: 1 1 0;
   background-color: var(--gris-5);
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: start;
   position: relative;
   overflow: hidden;
 
@@ -711,14 +811,13 @@ gap: 5px;
   margin: 0;
 }
 .xarxes .post .avatar {
+
   background-color: var(--primari);
-  width: 1.5dvw;
-  height: 1.5dvw;
   border-radius: 50%;
 }
 
 .xarxes .post .post-signat {
-  margin: 1dvw 0.5dvw 0.5dvw 1dvw;
+  margin: 2dvw 1dvw 1dvw 2dvw;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -728,19 +827,47 @@ gap: 5px;
 
 .xarxes .instag .post-signat {
   position: absolute;
+  top: 0;
   color: var(--gris-5);
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
 }
 
 .xarxes .post-signat img {
-  max-width: 30px;
+  max-width: 8dvw;
+  aspect-ratio: 1 /1;
   margin: 0 0.5dvw 0 0;
 }
 
 .xarxes .post p {
-  margin: 0 1dvw 1dvw;
-  font-size: 0.9dvw;
+  margin: 2dvw 4dvw;
+  font-size: 3.5dvw;
   font-family: var(--p2-screen-font-family);
+}
+
+@media (min-width: 600px) {
+
+  .xarxes .post {
+    min-width: auto;
+  }
+
+  .xarxes .post .avatar {
+    width: 2dvw;
+    height: 2dvw;
+  }
+
+  .xarxes .post .post-signat {
+    margin: 1dvw 0.5dvw 0.5dvw 1dvw;
+  }
+
+  .xarxes .post-signat img {
+  max-width: 30px;
+  }
+
+  .xarxes .post p {
+    margin: 0 1dvw 1dvw;
+    font-size: 0.9dvw;
+  }
+    
 }
 
 /******************************  P PRINCIPAL PATROS *****************************/
@@ -762,16 +889,30 @@ gap: 5px;
 }
 
 .patrocinis .patros-graella {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  gap: 1dvw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2dvw;
   margin-bottom: 4dvw;
 }
 
 .patrocinis .patros-graella img {
-  max-width: 13dvw;
+  max-width: 35vw;
   flex: 1 1 0;
+}
+
+@media (min-width: 600px) {
+
+  .patrocinis .patros-graella {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1dvw;
+  }
+
+  .patrocinis .patros-graella img {
+    max-width: 13dvw;
+  }
+
 }
 
 /******************************* P PRINCIPAL FOOTER ***********************************/
@@ -871,9 +1012,10 @@ footer .footer-xxss a img {
 
 .notis-graella {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 3dvw;
-  margin-bottom: 3dvw;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 6dvw;
+  margin: 3dvw;
+  margin-bottom: 6dvw;
 
 }
 
@@ -907,6 +1049,16 @@ footer .footer-xxss a img {
   left: 5px;
 }
 
+@media (min-width: 600px) {
+  .notis-graella {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3dvw;
+    margin-bottom: 3dvw;
+  
+  }
+}
+
 /********************************************************************************************************/
 
 /************************ PAG EL CLUB ***************************************/
@@ -915,7 +1067,7 @@ footer .footer-xxss a img {
 
 .el-club header {
   width: 100%;
-  height: 32dvw;
+  height: 82vh;
   background-image: url(./img/stadium-931975-1.png);
   background-size: cover;
   background-position: center;
@@ -936,18 +1088,36 @@ footer .footer-xxss a img {
 }
 
 .el-club .historia img {
-  max-width: 50%;
-  height: auto;
-  width: auto;
-  object-fit: cover;
+display: none;
 }
 
 .el-club .historia p {
   font-family: var(--p-screen-big-font-family);
   font-size: var(--p-screen-big-font-size);
   color: var(--gris-5);
-  margin: 0 4dvw 4dvw;
+  margin: 0 4dvw 10dvh;
 }
+
+@media (min-width: 600px) {
+  .el-club header {
+    width: 100%;
+    height: 32dvw;
+  }
+
+  .el-club .historia img {
+    display: block;
+    max-width: 50%;
+    height: auto;
+    width: auto;
+    object-fit: cover;
+  }
+
+  .el-club .historia p {
+    margin: 0 4dvw 4dvw;
+  }
+
+}
+
 
 /************************ CLUB OBJECTIUS I VALORS  ***************************************/
 
@@ -955,10 +1125,26 @@ footer .footer-xxss a img {
   background-color: var(--secundari);
   display: flex;
   flex-direction: column;
-  padding: 0 5dvw;
+  padding: 0;
+}
+
+.el-club .objectius-i-valors h2{
+  padding-left: 5vw;
+}
+
+.el-club .objectius-i-valors .grup-flex-1gap {
+  width: min-content;
+  padding: 5vw;
+  gap: 5vw;
+}
+
+.scroll-x {
+  display: block;
+  overflow-x: scroll;
 }
 
 .el-club .objectius-i-valors .part {
+  width: calc(87vw - 2px);
   border: 2px solid var(--primari-2);
   border-radius: 16px;
   padding: 1dvw;
@@ -974,7 +1160,7 @@ footer .footer-xxss a img {
 
 .el-club .objectius-i-valors .objectius {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 1dvw;
   margin-bottom: 3dvw;
 }
@@ -1000,10 +1186,15 @@ footer .footer-xxss a img {
 
 .el-club .objectius-i-valors .valors {
   margin-bottom: 3dvw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
 }
 
 .el-club .objectius-i-valors .icona-valor {
   margin: 1dvw;
+  flex-direction: column;
   align-items: center;
   justify-content: flex-start;
 }
@@ -1019,13 +1210,54 @@ justify-content: center;
   flex: 4 4 0;
 }
 
+.el-club .objectius-i-valors .icona-valor .p-screen {
+  font-size: var(--p-screen-big-font-size);
+}
+
+
+@media (min-width: 600px) {
+  .scroll-x {
+    overflow-x: auto;
+  }
+
+  .el-club .objectius-i-valors .objectius {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1dvw;
+    margin-bottom: 3dvw;
+  }
+
+  .el-club .objectius-i-valors .grup-flex-1gap {
+    width: 100%;
+    padding:0 2vw;
+    gap: 1vw;
+  }
+
+  .el-club .objectius-i-valors .part {
+    min-width: auto;
+  }
+  .el-club .objectius-i-valors .icona-valor {
+    margin: 1dvw;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .el-club .objectius-i-valors .icona-valor .p-screen {
+    font-size: var(--p2-screen-font-size);
+  }
+
+}
+
+
 /************************ CLUB ORGANIGRAMA ***************************************/
 
 .el-club .organigrama {
+  overflow: hidden;
   background-color: var(--gris-5);
   display: flex;
   flex-direction: column;
-  padding: 0 5dvw;
+  padding: 0 0 0 5dvw;
 }
 
 .organigrama h2 {
@@ -1034,14 +1266,15 @@ justify-content: center;
 }
 
 .organigrama .organigrama-graella {
+  width: min-content;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 2dvw;
-  margin-bottom: 3dvw;
+  grid-gap: 5dvw;
+  margin:0 5dvw 5dvw 0;
 }
 
 .organigrama .organigrama-graella img {
-  max-width: 80%;
+  max-width: 41vw;
   text-align: center;
 }
 
@@ -1062,6 +1295,20 @@ justify-content: center;
   font-weight: 600;
 }
 
+@media (min-width: 600px) {
+
+  .organigrama .organigrama-graella {
+    width: auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2dvw;
+  }
+
+  .organigrama .organigrama-graella img {
+    max-width: 80%;
+  }
+
+}
+
 /************************ CLUB LOCALITZACIONS ***************************************/
 .el-club .localitzacio  {
   background-color: var(--primari);
@@ -1078,11 +1325,14 @@ justify-content: center;
 
 .localitzacio .graella-localitzacions {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 1fr);
   grid-template-areas:
-  "a a b c d"
-  "a a e f g";
+  "a a"
+  "a a"
+  "b c"
+  "d e"
+  "f g";
   gap: 1dvw;
  padding-bottom: 4dvw;
 }
@@ -1095,6 +1345,7 @@ justify-content: center;
 
 .localitzacio .graella-localitzacions .loca-1 {
   grid-area: a;
+  margin-right: 5vw;
 }
 .localitzacio .graella-localitzacions .loca-2 {
   grid-area: b;
@@ -1115,7 +1366,18 @@ justify-content: center;
   grid-area: g;
 }
 
+@media (min-width: 600px) {
 
+  .localitzacio .graella-localitzacions {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+    "a a b c d"
+    "a a e f g";
+  }
+
+}
 
 /************************ CLUB FER SOCI ***************************************/
 .el-club .fes-te-soci {
@@ -1139,6 +1401,7 @@ justify-content: center;
 
 /********************************************************************************************************/
 
+
 .activitats {
   background-color: var(--secundari);
   line-height: auto;
@@ -1146,15 +1409,16 @@ justify-content: center;
 
 .activitats header{
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  justify-content: space-around;
   width: 100%;
-  height: 32dvw;
+  height: 90svh;
   background-image: 
-  linear-gradient(to right, rgba(0, 0, 0, 0) 0 30%, rgba(0, 0, 0, 0.8) 50% 100%),
+  linear-gradient(to bottom, rgba(0, 0, 0, 0) 0 20%, rgba(0, 0, 0, 0.8) 30% 100%),
   url(./img/pexels-run-ffwpu-2654902.jpg);
   background-size: cover;
   background-position: center;
-  line-height: 2dvw;
+  line-height: normal;
 }
 
 .activitats header p {
@@ -1166,6 +1430,7 @@ justify-content: center;
 }
 
 .activitats header h1 {
+  font-size: var(--h-2-font-size);
   text-align: left;
   margin-top: 0;
 }
@@ -1179,9 +1444,10 @@ justify-content: center;
 
 .activitats header .column {
   display: flex;
-  max-width: 50dvw;
+  max-width: 100%;
   flex-direction: column;
   justify-content: center;
+  margin: 5dvw;
   
 }
 
@@ -1199,36 +1465,82 @@ justify-content: center;
 .activitats section p{
   font-family: var(--p-screen-font-family);
   font-size: var(--p-screen-font-size);
-  line-height: 2dvw;
+  line-height: normal;
 }
 
 .activitats .activitat-info {
   display: flex;
-  flex-direction: row;
-  padding: 4dvw 8dvw;
+  flex-direction: column;
+  padding: 8dvw 8dvw;
   gap: 4dvw;
 }
 
-.activitats .activitat-info:nth-child(even){
-  flex-direction: row-reverse;
+.activitats .activitat-info .column p{
+  font-size: var(--p-font-size);
 }
 
 .activitats .activitat-info .column-2 {
-  flex: 3 3 0;
+  flex: auto;
+  width: 50%;
   aspect-ratio: 1 /1;
   border-radius: 50%;
   overflow: hidden;
+  align-self: center;
+
 }
 
 .activitats .activitat-info img {
-  max-width: 130%;
-  height: auto;
-  width: auto;
+  height: 100%;
+  width: 100%;
   object-fit: cover;
   object-position: center;
 }
 
 
+@media (min-width: 600px) {
+  .activitats header{
+    background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0) 0 30%, rgba(0, 0, 0, 0.8) 50% 100%),
+    url(./img/pexels-run-ffwpu-2654902.jpg);
+    display: flex;
+    flex-direction: row;
+    height: 32dvw;
+    line-height: 2dvw;
+  }
+
+  .activitats header h1{
+    font-size: var(--h-1-font-size);
+  }
+
+  .activitats header .column {
+    max-width: 50dvw;
+  }
+
+  .activitats .activitat-info {
+    display: flex;
+    flex-direction: row;
+    padding: 4dvw 8dvw;
+  }
+
+  .activitats .activitat-info:nth-child(even){
+    flex-direction: row-reverse;
+  }
+
+  .activitats .activitat-info .column-2 {
+    width: auto;
+    flex: 3 3 0;
+  }
+
+  .activitats .activitat-info img {
+    max-width: 130%;
+  }
+
+  .activitats .column p{
+    line-height: 2dvw;
+  }
+
+
+}
 
 
 /************************ ACTIVITATS FER SOCI ***************************************/

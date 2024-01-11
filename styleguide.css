@@ -16,31 +16,31 @@
  
   --h-1-font-family: "Bebas Neue", Helvetica;
   --h-1-font-weight: 400;
-  --h-1-font-size: 6dvw;
+  --h-1-font-size: 24dvw;
   --h-1-letter-spacing: 0px;
   --h-1-line-height: 90px;
   --h-1-font-style: normal;
   --h-2-font-family: "Bebas Neue", Helvetica;
   --h-2-font-weight: 400;
-  --h-2-font-size: 4dvw;
+  --h-2-font-size: 12dvw;
   --h-2-letter-spacing: 0px;
   --h-2-line-height: normal;
   --h-2-font-style: normal;
   --h-3-font-family: "Outfit", Helvetica;
   --h-3-font-weight: 600;
-  --h-3-font-size: 2dvw;
+  --h-3-font-size: 6dvw;
   --h-3-letter-spacing: 0px;
   --h-3-line-height: normal;
   --h-3-font-style: normal;
   --p-font-family: "Outfit", Helvetica;
   --p-font-weight: 400;
-  --p-font-size: 1.2dvw;
+  --p-font-size: 3.5dvw;
   --p-letter-spacing: 0px;
   --p-line-height: normal;
   --p-font-style: normal;
   --p-strong-font-family: "Outfit", Helvetica;
   --p-strong-font-weight: 600;
-  --p-strong-font-size: 1.3dvw;
+  --p-strong-font-size: 4dvw;
   --p-strong-letter-spacing: 0px;
   --p-strong-line-height: normal;
   --p-strong-font-style: normal;
@@ -64,19 +64,19 @@
   --h-4-font-style: normal;
   --p-screen-font-family: "Outfit", Helvetica;
   --p-screen-font-weight: 400;
-  --p-screen-font-size: 1.5dvw;
+  --p-screen-font-size: 5dvw;
   --p-screen-letter-spacing: 0px;
   --p-screen-line-height: normal;
   --p-screen-font-style: normal;
   --p-screen-big-font-family: "Outfit", Helvetica;
   --p-screen-big-font-weight: 600;
-  --p-screen-big-font-size: 2dvw;
+  --p-screen-big-font-size: 5dvw;
   --p-screen-big-letter-spacing: 0px;
   --p-screen-big-line-height: normal;
   --p-screen-big-font-style: normal;
   --p2-screen-font-family: "Fraunces", Helvetica;
   --p2-screen-font-weight: 400;
-  --p2-screen-font-size: 1.1dvw;
+  --p2-screen-font-size: 3dvw;
   --p2-screen-letter-spacing: 0px;
   --p2-screen-line-height: normal;
   --p2-screen-font-style: normal;
@@ -86,5 +86,21 @@
   --p2-big-screen-letter-spacing: 0px;
   --p2-big-screen-line-height: normal;
   --p2-big-screen-font-style: normal;
+
+  @media (min-width: 600px) {
+  --h-1-font-size: 6dvw;
+  --h-2-font-size: 4dvw;
+  --h-3-font-size: 2dvw;
+  --p-font-size: 1.2dvw;
+  --p-letter-spacing: 0px;
+  --p-strong-font-size: 1.3dvw;
+  --p-2-font-size: 0.7dvw;
+  --info-font-size: 0.6dvw;
+  --h-4-font-size: 4dvw;
+  --p-screen-font-size: 1.5dvw;
+  --p-screen-big-font-size: 2dvw;
+  --p2-screen-font-size: 1.75dvw;
+  --p2-big-screen-font-size: 3dvw;
+  }
 
 }
