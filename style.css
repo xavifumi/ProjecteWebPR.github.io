@@ -15,16 +15,15 @@
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  width:100vw;
+  width:100%;
   background-color: var(--primari);
   z-index: 10;
   border-top: 2px solid var(--primari-2);
 }
-/*
+
 .nav > a {
-  padding: 0;
-  display: none;
-}*/
+  padding: 5px;
+}
 
 .menu-principal {
   list-style-type: none;
@@ -54,7 +53,7 @@
   text-align: center;
   white-space: nowrap;
   display: flex;
-  height: 11vw;
+  height: 7vh;
   max-height: 0;
   padding:0 16px;
   position: relative;
@@ -67,12 +66,15 @@
 .toggle-menu {
   appearance: none;
   background-image: url(img/menu.png);
+  background-position: 5px 5px;
   background-size: 70%;
   background-repeat: no-repeat;
+  cursor: pointer;
+  
 }
 
 .toggle-menu:checked ~ .menu-principal li a{
-  max-height: 11vw;
+  max-height: 7vh;
   transition: 
   max-height 0.3s ease-out;
 }
@@ -84,7 +86,6 @@
 .menu-principal .sub-menu a {
   color: var(--primari);
 }
-
 
 .nav-right{
   float: right;
@@ -262,7 +263,7 @@ button:hover span:after {
     position: absolute;
     z-index: 0;
     background-color: var(--secundari);
-    border: 0px solid var(--primari-2);
+    border: none;
     max-height: 0px;
     overflow: hidden;
     transition: 
@@ -328,13 +329,25 @@ button:hover span:after {
 
 /******************************   P PRINCIPAL VALORS   ****************************/
 
+section {
+  position: relative;
+}
+
 .pagina-principal .presentacio {
+  display: inline-block;  /* shrink-to-fit */
+  text-align: left;
+  width: 100%;
+  overflow: hidden;
+}
+
+.pagina-principal .scroll-presentacio {
 
   max-width: 100%;
   height: auto;
   background-color: var(--primari-2);
   display: flex;
   overflow-x: scroll;
+ 
 }
 
 .grup-flex-1gap {
@@ -344,11 +357,11 @@ button:hover span:after {
   gap: 1dvw;
 }
 
-.presentacio .grup-flex-1gap {
+.scroll-presentacio .grup-flex-1gap {
   gap: 0;
 }
 
-.presentacio .grup-flex-1gap .part:first-of-type {
+.scroll-presentacio .grup-flex-1gap .part:first-of-type {
   background-color: var(--primari);
 }
 
@@ -421,9 +434,27 @@ h3 {
 
 }
 
+.paginador {
+  position: absolute;
+  bottom: 5vw;
+  left: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  z-index: 0;
+}
+
+.punt {
+  width: 3vw;
+  height: 3vw;
+  margin: 0 2vw;
+  border-radius: 50%;
+  background-color: var(--gris-5);
+}
+
 @media (min-width: 600px) {
 
-  .pagina-principal .presentacio {
+  .pagina-principal .scroll-presentacio {
     overflow-x: auto;
   }
 
@@ -442,7 +473,7 @@ h3 {
     font-size: var(--h-3-font-size);
   }
 
-  .presentacio-p{
+  .scroll-presentacio-p{
     font-size: var(--p-screen-font-size);
   }
 
@@ -607,6 +638,10 @@ gap: 5px;
   display: none;
 }
 
+.no-web {
+  display: block;
+}
+
 .agenda .flex img {
   align-self: center;
   width: 10vw;
@@ -661,9 +696,13 @@ gap: 5px;
 
 @media (min-width: 600px) {
 
-  .no-mobil {
-    display: block;
-  }
+.no-mobil {
+  display: flex;
+}
+
+.no-web {
+  display: none;
+}
 
 .agenda .flex img {
   display: none;
@@ -697,7 +736,14 @@ gap: 5px;
   background-color: var(--gris-5);
   display: flex;
   flex-direction: column;
+}
 
+.noticies .paginador {
+  bottom: 19vw;
+}
+
+.noticies .paginador .punt{
+  background-color: var(--primari);
 }
 
 .noticies h2 {
@@ -803,10 +849,6 @@ gap: 5px;
     padding: 1dvw;
   }
   
-  .noticies .noti-body p {
-    height: 8dvw;
-  }
-
   .noticies button {
     margin: 3dvw auto;
   }
@@ -878,7 +920,7 @@ gap: 5px;
 
 .xarxes .detalls-activitats {
   gap: 1dvw;
-  margin: 0 0 4dvw;
+  margin: 0 0 8dvw;
 }
 
 .xarxes .post {
@@ -1024,7 +1066,7 @@ footer .footer-main {
   border-top: 2px solid var(--primari-2);
   border-bottom: 2px solid var(--primari-2);
   padding: 1dvw 3dvw;
-  margin: 2dvw 0;
+  margin-bottom: 2dvw;
 }
 
 footer .footer-menu {
@@ -1489,7 +1531,7 @@ justify-content: center;
 
 .activitats {
   background-color: var(--secundari);
-  line-height: auto;
+  line-height: normal;
 }
 
 .activitats header{
