@@ -295,7 +295,7 @@ button:hover span:after {
 
 
   .espaiador-menu {
-    margin-top: 4vw;
+    margin-top: 70px;
   }
 
   .espaiador-footer {
@@ -1631,7 +1631,8 @@ justify-content: center;
     url(./img/pexels-run-ffwpu-2654902.jpg);
     display: flex;
     flex-direction: row;
-    height: 32dvw;
+    justify-content: flex-end;
+    height: auto;
     line-height: 2dvw;
   }
 
